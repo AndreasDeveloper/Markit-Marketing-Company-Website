@@ -1,0 +1,44 @@
+// * ---------------------- * \\
+//         NEWS BLOCK         \\
+// * ---------------------- * \\
+
+// News Block Wrap
+.news-block-wrap {
+    margin: 2rem 20rem;
+    @media only screen and (max-width: $bp-small) { margin: 2rem 0; }
+}
+
+// News Block
+.news-block {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    margin: 0 4rem;
+    padding: 0;
+    // Image Wrap
+    &__img-wrap {
+        width: 100%; height: 25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img { width: 100%; height: 100%; }
+    }
+}
+#news-block__title { color: $color-white; font-weight: 300; margin-top: 14rem; }
+
+// Image Blocks
+.image-block-1 {
+    background-image: linear-gradient(to bottom, rgba($color-primary, .01), rgba($color-primary, .65)), url('../img/img-8.jpg');
+}
+.image-block-2 {
+    background-image: linear-gradient(to bottom, rgba($color-primary, .01), rgba($color-primary, .65)), url('../img/img-9.jpg');
+}
+.image-block-3 {
+    background-image: linear-gradient(to bottom, rgba($color-primary, .01), rgba($color-primary, .65)), url('../img/img-7.jpg');
+}
+.image-block-1,
+.image-block-2,
+.image-block-3 {
+    background-position: center;
+    background-size: cover;
+}

@@ -64,19 +64,7 @@ module.exports = {
                         attrs: ['img:src', 'link:href', 'img:data-lazy']
                     }
                 }
-            },
-            {
-                test: /\.(mov|mp4)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: '/video/'
-                        }
-                    }
-                ]
-            },
+            }
         ]
     }
 };

@@ -1,0 +1,51 @@
+// * ---------------------- * \\
+//          HOME PAGE         \\
+// * ---------------------- * \\
+
+// Service Icons
+.service-block__icon {
+    height: 6rem;
+    width: 6rem;
+    fill: $color-primary;
+}
+
+// Details Section
+.details {
+    background-image: linear-gradient(to bottom, rgba($color-primary, .01), rgba($color-primary, .65)), url('../img/img-2.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 75vh;
+    // Content
+    &__content {
+        h3 { text-transform: uppercase; font-size: 2rem; font-weight: 400; border-bottom: .1rem solid $color-primary; width: 12%; }
+        h2 { font-size: 5rem; }
+        // Buttons
+        &__buttons {
+            .a-1 { font-size: 2.5rem; border-bottom: .2rem solid $color-primary; }
+            .a-2 { background-color: $color-primary;  font-size: 1.8rem; font-weight: 500; 
+                &:hover {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+}
+
+// Client Experience Section
+.client-experience {
+    // Right
+    &__right {
+        h4 { font-size: 2.2rem; font-weight: 500; border-bottom: .2rem solid $color-primary; padding-bottom: .6rem; width: 26%; text-transform: uppercase; }
+        h2 { font-size: 3.4rem; }
+        h3 { font-size: 1.8rem; font-weight: 300; }
+    }
+}
+
+// News Section
+.news {
+    min-height: 100vh;
+    background-color: $color-background-1;
+    h2 { font-size: 4.5rem; color: $color-font-1;
+        span { border-bottom: .25rem solid $color-primary; }
+    }
+}
