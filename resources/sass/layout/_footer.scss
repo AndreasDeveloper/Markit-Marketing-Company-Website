@@ -1,0 +1,27 @@
+// * ---------------------- * \\
+//           FOOTER          \\
+// * ---------------------- * \\
+
+.footer {
+    background-color: $color-background-4;
+    margin-top: -27vh;
+}
+// Left Side of the footer
+.footer-left {
+    padding-top: 18rem;
+    padding-left: 12rem;
+    h2 { font-size: 7rem; font-weight: 500; }
+    p { font-weight: 300; font-size: 1.6rem; width: 45%; border-bottom: .1rem solid $color-background-3; padding-bottom: 2rem; }
+    h3 { font-weight: 300; font-size: 1.8rem; }
+}
+// Right Side of the footer
+.footer-right {
+    padding-top: 20rem;
+    margin-right: 10rem;
+}
+// Footer Element
+.fel {
+    font-weight: 300;
+    cursor: pointer;
+    i { color: $color-primary; font-size: 2rem; margin-right: 1rem; }
+}

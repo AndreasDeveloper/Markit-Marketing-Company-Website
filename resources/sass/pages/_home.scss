@@ -35,17 +35,118 @@
 .client-experience {
     // Right
     &__right {
-        h4 { font-size: 2.2rem; font-weight: 500; border-bottom: .2rem solid $color-primary; padding-bottom: .6rem; width: 26%; text-transform: uppercase; }
+        h4 { font-size: 2.2rem; font-weight: 500; border-bottom: .2rem solid $color-primary; padding-bottom: .6rem; width: 26%; text-transform: uppercase;
+            // - Media Queries - \\
+            @media only screen and (max-width: $bp-largest-5) { width: 48%; }
+            @media only screen and (max-width: $bp-small) { text-align: left; width: 40%; margin: 0 auto; }
+        }
         h2 { font-size: 3.4rem; }
         h3 { font-size: 1.8rem; font-weight: 300; }
+        @media only screen and (max-width: $bp-small) { margin-right: 0 !important; }
     }
+    @media only screen and (max-width: $bp-small) { text-align: center; margin: 0 auto; }
 }
 
 // News Section
 .news {
-    min-height: 100vh;
+    min-height: 110vh;
     background-color: $color-background-1;
     h2 { font-size: 4.5rem; color: $color-font-1;
         span { border-bottom: .25rem solid $color-primary; }
     }
+    // Bottom Content
+    &__bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5rem 30rem;
+        h3 { font-weight: 300; color: $color-font-1; 
+            @media only screen and (max-width: $bp-small) { text-align: center; }
+        }
+        @media only screen and (max-width: $bp-largest-5) { margin: 5rem 10rem; }
+        @media only screen and (max-width: $bp-small) { flex-direction: column; margin: 5rem 5rem; }
+    }
+    // Buton Wrap
+    &__button-wrap {
+        display: flex;
+        i { background-color: $color-white; color: $color-primary; border-radius: 50%; font-size: 2.5rem; padding: 1rem 2rem; cursor: pointer; box-shadow: 0 .5rem 1.5rem rgba($color-black, .30); }
+    }
+    // - Media Queries - \\
+    @media only screen and (max-width: $bp-desktop) { min-height: 140vh; }
+    @media only screen and (max-width: $bp-largest-5) { min-height: 60vh; }
+    @media only screen and (max-width: $bp-medium) { min-height: 55vh; }
+    @media only screen and (max-width: $bp-ipad) { min-height: 70vh; }
+    @media only screen and (max-width: $bp-small) { min-height: 240vh; }
 }
+
+// Testimonials Section
+.testimonials {
+    min-height: 90vh;
+    background-color: $color-primary;
+    margin-top: -5rem;
+    position: relative;
+    // - Media Queries - \\
+    @media only screen and (max-width: $bp-desktop) { min-height: 100vh; }
+    @media only screen and (max-width: $bp-largest-5) { min-height: 40vh; }
+    @media only screen and (max-width: $bp-small) { min-height: 130vh; }
+}
+.slider {
+    padding-top: 15rem;
+}
+.mini-nav { color: $color-white; margin-top: 32rem !important;
+    li a { border: 1px solid $color-background-3; background-color: $color-background-3; }
+    // - Media Queries - \\
+    @media only screen and (max-width: $bp-desktop) { margin-top: 38rem !important; }
+    @media only screen and (max-width: $bp-small) { margin-top: 60rem !important; }
+}
+.testimonial-text { text-align: center;
+    h2 { font-weight: 300; font-size: 3rem; }
+}
+.uk-dotnav > .uk-active > * {
+    background-color: $color-white;
+}
+.uk-dotnav > * >:focus, .uk-dotnav > * >:hover {
+    background-color: $color-white;
+    outline: 0;
+    border-color: $color-white;
+}
+.testimonial-client-data {
+    h3 { font-weight: 400; }
+    h4 { font-weight: 300; margin-top: -1rem !important; }
+}
+// Icons
+.q-1 {
+    position: absolute;
+    top: 12%;
+    left: 6%;
+    font-size: 15rem;
+    color: rgba($color-white, .30);
+    // - Media Queries - \\
+    @media only screen and (max-width: $bp-desktop) { font-size: 12rem; top: 14%; left: 2%; }
+}
+.q-2 {
+    position: absolute;
+    top: 24%;
+    left: 75%;
+    font-size: 12rem;
+    color: rgba($color-white, .30);
+    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+    // - Media Queries - \\
+    @media only screen and (max-width: $bp-desktop) { font-size: 10rem; top: 34%; left: 78%; }
+    @media only screen and (max-width: $bp-largest-5) { top: 36%; left: 83%; }
+}
+
+// Partners Section
+.partners {
+    position: relative;
+    background-color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .30);
+    margin-top: -25vh;
+    margin-bottom: 10rem;
+}
+.logos {
+    img { height: 10rem; }
+}
+.logo-3 { height: 12rem !important; }
+.logo-4 { height: 6rem !important; }

@@ -40,27 +40,78 @@ body {
     body {
       padding: 0; } }
 
+.news-block-wrap {
+  margin: 2rem 25rem; }
+  @media only screen and (max-width: 86.875em) {
+    .news-block-wrap {
+      margin: 2rem 5rem; } }
+  @media only screen and (max-width: 65.625em) {
+    .news-block-wrap {
+      margin: 2rem 0rem; } }
+
 .news-block {
   display: flex;
   flex-direction: column;
-  margin: 2rem 10rem;
   background-color: #fff;
+  margin: 0 4rem;
   padding: 0; }
   .news-block__img-wrap {
     width: 100%;
-    height: 100%; }
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .news-block__img-wrap img {
       width: 100%;
       height: 100%; }
+    @media only screen and (max-width: 86.875em) {
+      .news-block__img-wrap {
+        height: 20rem; } }
+  .news-block__content {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem; }
+    .news-block__content h4 {
+      font-size: 1.2rem;
+      font-weight: 300; }
+    .news-block__content h3 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: #616161; }
+    .news-block__content__genres {
+      display: flex;
+      align-items: center;
+      border-top: 0.2rem solid #1269fa;
+      width: 10%; }
+      .news-block__content__genres h3 {
+        font-size: 1.2rem;
+        font-weight: 300;
+        background-color: #ebebeb;
+        padding: .6rem;
+        border-radius: 2rem;
+        text-transform: uppercase;
+        cursor: pointer; }
+
+#news-block__title {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-top: 16rem; }
 
 .image-block-1 {
-  background-image: url(/img/img-8.jpg); }
+  background-image: linear-gradient(to bottom, rgba(18, 105, 250, 0.01), rgba(18, 105, 250, 0.65)), url(/img/img-8.jpg); }
 
 .image-block-2 {
-  background-image: url(/img/img-9.jpg); }
+  background-image: linear-gradient(to bottom, rgba(18, 105, 250, 0.01), rgba(18, 105, 250, 0.65)), url(/img/img-9.jpg); }
 
 .image-block-3 {
-  background-image: url(/img/img-7.jpg); }
+  background-image: linear-gradient(to bottom, rgba(18, 105, 250, 0.01), rgba(18, 105, 250, 0.65)), url(/img/img-7.jpg); }
+
+.image-block-1,
+.image-block-2,
+.image-block-3 {
+  background-position: center;
+  background-size: cover; }
 
 .header {
   background-image: linear-gradient(to bottom, rgba(18, 105, 250, 0.01), rgba(18, 105, 250, 0.65)), url(/img/hero.jpg);
@@ -106,6 +157,14 @@ body {
   padding-bottom: .6rem;
   width: 26%;
   text-transform: uppercase; }
+  @media only screen and (max-width: 65.625em) {
+    .client-experience__right h4 {
+      width: 48%; } }
+  @media only screen and (max-width: 37.5em) {
+    .client-experience__right h4 {
+      text-align: left;
+      width: 40%;
+      margin: 0 auto; } }
 
 .client-experience__right h2 {
   font-size: 3.4rem; }
@@ -114,12 +173,146 @@ body {
   font-size: 1.8rem;
   font-weight: 300; }
 
+@media only screen and (max-width: 37.5em) {
+  .client-experience__right {
+    margin-right: 0 !important; } }
+
+@media only screen and (max-width: 37.5em) {
+  .client-experience {
+    text-align: center;
+    margin: 0 auto; } }
+
 .news {
-  min-height: 90vh;
+  min-height: 110vh;
   background-color: #e4e4e4; }
   .news h2 {
     font-size: 4.5rem;
     color: #616161; }
     .news h2 span {
       border-bottom: 0.25rem solid #1269fa; }
+  .news__bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem 30rem; }
+    .news__bottom-content h3 {
+      font-weight: 300;
+      color: #616161; }
+      @media only screen and (max-width: 37.5em) {
+        .news__bottom-content h3 {
+          text-align: center; } }
+    @media only screen and (max-width: 65.625em) {
+      .news__bottom-content {
+        margin: 5rem 10rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .news__bottom-content {
+        flex-direction: column;
+        margin: 5rem 5rem; } }
+  .news__button-wrap {
+    display: flex; }
+    .news__button-wrap i {
+      background-color: #fff;
+      color: #1269fa;
+      border-radius: 50%;
+      font-size: 2.5rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 86.875em) {
+    .news {
+      min-height: 140vh; } }
+  @media only screen and (max-width: 65.625em) {
+    .news {
+      min-height: 60vh; } }
+  @media only screen and (max-width: 50em) {
+    .news {
+      min-height: 55vh; } }
+  @media only screen and (max-width: 48em) {
+    .news {
+      min-height: 70vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .news {
+      min-height: 240vh; } }
+
+.testimonials {
+  min-height: 90vh;
+  background-color: #1269fa;
+  margin-top: -5rem;
+  position: relative; }
+  @media only screen and (max-width: 86.875em) {
+    .testimonials {
+      min-height: 100vh; } }
+  @media only screen and (max-width: 65.625em) {
+    .testimonials {
+      min-height: 40vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .testimonials {
+      min-height: 130vh; } }
+
+.slider {
+  padding-top: 15rem; }
+
+.mini-nav {
+  color: #fff;
+  margin-top: 32rem !important; }
+  .mini-nav li a {
+    border: 1px solid #d3d3d3;
+    background-color: #d3d3d3; }
+  @media only screen and (max-width: 86.875em) {
+    .mini-nav {
+      margin-top: 38rem !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .mini-nav {
+      margin-top: 60rem !important; } }
+
+.testimonial-text {
+  text-align: center; }
+  .testimonial-text h2 {
+    font-weight: 300;
+    font-size: 3rem; }
+
+.uk-dotnav > .uk-active > * {
+  background-color: #fff; }
+
+.uk-dotnav > * > :focus, .uk-dotnav > * > :hover {
+  background-color: #fff;
+  outline: 0;
+  border-color: #fff; }
+
+.testimonial-client-data h3 {
+  font-weight: 400; }
+
+.testimonial-client-data h4 {
+  font-weight: 300;
+  margin-top: -1rem !important; }
+
+.q-1 {
+  position: absolute;
+  top: 12%;
+  left: 6%;
+  font-size: 15rem;
+  color: rgba(255, 255, 255, 0.3); }
+  @media only screen and (max-width: 86.875em) {
+    .q-1 {
+      font-size: 12rem;
+      top: 14%;
+      left: 2%; } }
+
+.q-2 {
+  position: absolute;
+  top: 28%;
+  left: 75%;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.3);
+  transform: rotateX(180deg);
+  transform: rotateY(180deg); }
+  @media only screen and (max-width: 86.875em) {
+    .q-2 {
+      font-size: 10rem;
+      top: 34%;
+      left: 78%; } }
+  @media only screen and (max-width: 65.625em) {
+    .q-2 {
+      top: 36%;
+      left: 83%; } }
 

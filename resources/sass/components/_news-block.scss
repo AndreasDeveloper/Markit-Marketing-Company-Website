@@ -4,8 +4,10 @@
 
 // News Block Wrap
 .news-block-wrap {
-    margin: 2rem 20rem;
-    @media only screen and (max-width: $bp-small) { margin: 2rem 0; }
+    margin: 2rem 25rem;
+    // - Media Queries - \\
+    @media only screen and (max-width: $bp-desktop) { margin: 2rem 5rem; }
+    @media only screen and (max-width: $bp-largest-5) { margin: 2rem 0rem; }
 }
 
 // News Block
@@ -17,14 +19,27 @@
     padding: 0;
     // Image Wrap
     &__img-wrap {
-        width: 100%; height: 25rem;
+        width: 100%; height: 20rem;
         display: flex;
         align-items: center;
         justify-content: center;
         img { width: 100%; height: 100%; }
+        @media only screen and (max-width: $bp-desktop) { height: 20rem; }
+    }
+    // Content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+        h4 { font-size: 1.2rem; font-weight: 300; } // Date
+        h3 { font-size: 1.6rem; font-weight: 400; color: $color-font-1; } // Description
+        // Genres Wrap
+        &__genres { display: flex; align-items: center; border-top: .2rem solid $color-primary; width: 10%;
+            h3 { font-size: 1.2rem; font-weight: 300; background-color: $color-background-2; padding: .6rem; border-radius: 2rem; text-transform: uppercase; cursor: pointer; }
+        }
     }
 }
-#news-block__title { color: $color-white; font-weight: 300; margin-top: 14rem; }
+#news-block__title { color: $color-white; font-size: 2.2rem; font-weight: 300; margin-top: 16rem; }
 
 // Image Blocks
 .image-block-1 {
