@@ -15,6 +15,7 @@
     background-position: center;
     background-size: cover;
     min-height: 75vh;
+    @media only screen and (max-width: $bp-iphonese) { min-height: 85vh; }
     // Content
     &__content {
         h3 { text-transform: uppercase; font-size: 2rem; font-weight: 400; border-bottom: .1rem solid $color-primary; width: 12%; }
@@ -35,7 +36,7 @@
 .client-experience {
     // Right
     &__right {
-        h4 { font-size: 2.2rem; font-weight: 500; border-bottom: .2rem solid $color-primary; padding-bottom: .6rem; width: 26%; text-transform: uppercase;
+        h4 { font-size: 2.2rem; font-weight: 500; border-bottom: .2rem solid $color-primary; padding-bottom: .6rem; width: 28%; text-transform: uppercase;
             // - Media Queries - \\
             @media only screen and (max-width: $bp-largest-5) { width: 48%; }
             @media only screen and (max-width: $bp-small) { text-align: left; width: 40%; margin: 0 auto; }
@@ -77,6 +78,8 @@
     @media only screen and (max-width: $bp-medium) { min-height: 55vh; }
     @media only screen and (max-width: $bp-ipad) { min-height: 70vh; }
     @media only screen and (max-width: $bp-small) { min-height: 240vh; }
+    @media only screen and (max-width: $bp-vsmall-3) { min-height: 270vh; }
+    @media only screen and (max-width: $bp-iphonese) { min-height: 320vh; }
 }
 
 // Testimonials Section
@@ -86,8 +89,9 @@
     margin-top: -5rem;
     position: relative;
     // - Media Queries - \\
-    @media only screen and (max-width: $bp-desktop) { min-height: 100vh; }
+    @media only screen and (max-width: $bp-desktop) { min-height: 130vh; }
     @media only screen and (max-width: $bp-largest-5) { min-height: 40vh; }
+    @media only screen and (max-width: $bp-medium) { min-height: 60vh; }
     @media only screen and (max-width: $bp-small) { min-height: 130vh; }
 }
 .slider {
@@ -97,7 +101,13 @@
     li a { border: 1px solid $color-background-3; background-color: $color-background-3; }
     // - Media Queries - \\
     @media only screen and (max-width: $bp-desktop) { margin-top: 38rem !important; }
-    @media only screen and (max-width: $bp-small) { margin-top: 60rem !important; }
+    @media only screen and (max-width: $bp-largest-5) { margin-top: 34rem !important; }
+    @media only screen and (max-width: $bp-medium) { margin-top: 36rem !important; }
+    @media only screen and (max-height: 50.75em) { margin-top: 60rem !important; }
+    @media only screen and (max-width: $bp-small) { margin-top: 50rem !important; }
+    @media only screen and (max-width: $bp-vsmall-1c) { margin-top: 60rem !important; }
+    @media only screen and (max-width: $bp-vsmall-3) { margin-top: 55rem !important; }
+    @media only screen and (max-width: $bp-vsmall-4) { margin-top: 60rem !important; }
 }
 .testimonial-text { text-align: center;
     h2 { font-weight: 300; font-size: 3rem; }
@@ -142,11 +152,22 @@
     position: relative;
     background-color: $color-white;
     box-shadow: 0 1rem 2rem rgba($color-black, .30);
-    margin-top: -25vh;
-    margin-bottom: 10rem;
+    margin-top: -25vh !important;
+    margin-bottom: 10rem !important;
+    // - Media Queries - \\
+    @media only screen and (max-width: $bp-largest-5) { margin-top: -5vh !important; }
+    @media only screen and (max-width: $bp-medium) { margin-top: -15vh !important; margin-bottom: 5rem !important; }
+    @media only screen and (max-width: $bp-small) { margin-top: -45vh !important; }
+    @media only screen and (max-width: $bp-vsmall-1c) { margin-bottom: 10rem !important; }
+    @media only screen and (max-width: $bp-vsmall-3) { margin-top: -30vh !important; }
+    @media only screen and (max-height: 50.75em) { margin-top: -40vh !important; margin-bottom: 10rem !important; }
+    @media only screen and (max-width: $bp-vsmall-3b) { margin-top: -30vh !important; margin-bottom: 0 !important; }
+    @media only screen and (max-width: $bp-iphonese) { margin-top: -8vh !important; margin-bottom: 0 !important; }
 }
 .logos {
-    img { height: 10rem; }
+    img { height: 10rem;
+        @media only screen and (max-width: $bp-medium) { height: 6rem; }
+    }
 }
 .logo-3 { height: 12rem !important; }
 .logo-4 { height: 6rem !important; }

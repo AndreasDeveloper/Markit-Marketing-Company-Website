@@ -2,4 +2,51 @@
 //         NAVIGATION         \\
 // * ---------------------- * \\
 
-.nav-wrap { background-color: transparent; }
+.nav-big-wrap {
+    position: relative;
+    z-index: 999;
+}
+// Left side content of navigation
+.navigation__left {
+    a { font-weight: 400; font-size: 3.5rem; }
+}
+// Right side content of navigation
+.navigation__right {
+    a { color: $color-background-2 !important; font-weight: 300; transition: all .4s ease-in-out; position: relative; }
+    a:hover::after {
+        width: calc(100% - 24px);
+        left: 12px;
+    }
+}
+.signup-btn { border-radius: 10rem; background-color: $color-primary; text-transform: none; font-size: 1.5rem; border: .1rem solid transparent;
+    &:hover::after { display: none; }
+    &:hover { border: .1rem solid $color-white; background-color: $color-white; color: $color-primary !important; }
+}
+
+// Test
+.nav-wrap {
+    @media only screen and (max-width: $bp-small) { display: none; }
+}
+// Sticky Nav
+.uk-section-primary, .nav-wrap { background: transparent !important; }
+.uk-navbar-container:not(.uk-navbar-transparent) { background-color: $color-white !important;
+    > .navigation__left a, .navigation__right a { color: $color-black !important; }
+    > .navigation__right .signup-btn { color: $color-white !important; }
+    // On Hover
+    > .navigation__right .signup-btn:hover { background-color: $color-white; color: $color-primary !important; border: .1rem solid $color-primary; }
+}
+// Anchor Tags Effect
+.navigation__right a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: .28rem;
+    background: $color-primary;
+    transition: all .4s cubic-bezier(.165, .84, .44, 1);
+    -webkit-transition: all .3s cubic-bezier(.165, .84, .44, 1);
+    -moz-transition: all .3s cubic-bezier(.165, .84, .44, 1);
+    -ms-transition: all .3s cubic-bezier(.165, .84, .44, 1);
+    -o-transition: all .3s cubic-bezier(.165, .84, .44, 1);
+}
